@@ -231,6 +231,7 @@ def price_prediction():
   data = None
   comp_model= None
   best= None
+  price=0
 
   choice = request.form['choice']
 
@@ -239,7 +240,7 @@ def price_prediction():
     model = request.form['model']
     variant = request.form['variant']
 
-    #price = predict_price(company,model,variant)
+    price = predict_price(company,model,variant)
 
   elif choice=='competition':
     company=request.form['company']
